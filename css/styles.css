@@ -1,0 +1,268 @@
+/* Styles globaux */
+body {
+    background-color: #f4f7fa; /* Couleur de fond douce */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Texte de couleur principale */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête */
+h1, h2 {
+    color: #2c3e50; /* Couleur principale de l'en-tête */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.8rem; /* Taille plus grande pour le titre principal */
+    color: #3498db; /* Couleur bleue pour le titre principal */
+}
+
+h2 {
+    font-size: 2.2rem; /* Taille réduite pour les sous-titres */
+    color: #2c3e50; /* Couleur subtile pour les sous-titres */
+}
+
+/* Liste des artistes */
+.artist-list-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.artist-list-container li {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #34495e; /* Couleur du texte des éléments */
+}
+
+.artist-list-container li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles de recherche */
+.search-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#search {
+    padding: 14px 20px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #3498db; /* Bordure bleue pour le champ de recherche */
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#search:focus {
+    border-color: #2980b9; /* Bordure bleue foncée au focus */
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.2);
+}
+
+#search::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Bouton d'administration */
+.admin-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-button {
+    padding: 15px 35px;
+    background-color: #3498db; /* Bouton bleu */
+    color: white;
+    border: none;
+    font-size: 1.2rem; /* Taille de police ajustée pour le bouton */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.admin-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaire de connexion */
+.login-container {
+    max-width: 450px;
+    margin: 70px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    margin-bottom: 30px;
+    font-size: 2.2rem; /* Titre de taille légèrement plus petite */
+    font-weight: 600;
+    color: #3498db;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    font-size: 1rem; /* Taille de la police des labels ajustée */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    font-size: 1.1rem; /* Taille de la police pour les champs de saisie */
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Lien d'enregistrement */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #3498db; /* Couleur bleue pour le lien */
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Page d'administration */
+.admin-container {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h2 {
+    margin-bottom: 30px;
+    color: #2c3e50; /* Couleur subtile pour l'en-tête */
+    font-size: 2.5rem; /* Taille plus grande pour l'en-tête admin */
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Liste des albums */
+.album-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.album-list li {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    color: #34495e;
+}
+
+.album-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries pour Responsivité */
+@media (max-width: 768px) {
+    .login-container,
+    .admin-container {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2rem; /* Réduction de la taille des titres sur mobile */
+    }
+
+    #search {
+        width: 90%;
+    }
+
+    .login-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .admin-button {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    .artist-list-container,
+    .album-list {
+        grid-template-columns: 1fr;
+    }
+}
